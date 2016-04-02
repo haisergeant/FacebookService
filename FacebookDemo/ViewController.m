@@ -32,7 +32,7 @@
     [FacebookService loginWithWritePermissions:@[@"publish_actions"]
                            fromViewController:self
                                       handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                          if (result) {
+                                          if (result && [FacebookService isSignInWithFacebook]) {
                                               [self performSegueWithIdentifier:@"goToUserView" sender:self];
                                           } else {
                                               NSLog(@"Error: %@", error.localizedDescription);

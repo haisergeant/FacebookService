@@ -94,7 +94,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lH-3c-P3p">
-                                <rect key="frame" x="255" y="239" width="90" height="30"/>
+                                <rect key="frame" x="255" y="311" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="Kpp-DS-knH"/>
                                 </constraints>
@@ -103,16 +103,28 @@
                                     <action selector="logoutBtnTapped:" destination="c1h-hY-DMJ" eventType="touchUpInside" id="wnB-mS-Jda"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UC-Ho-f0D">
+                                <rect key="frame" x="208" y="273" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="RoH-zb-HKN"/>
+                                </constraints>
+                                <state key="normal" title="Share sample image &amp; text"/>
+                                <connections>
+                                    <action selector="shareBtnTapped:" destination="c1h-hY-DMJ" eventType="touchUpInside" id="hRe-S7-eLp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1lH-3c-P3p" firstAttribute="top" secondItem="xZ6-Dg-ZkP" secondAttribute="bottom" constant="161" id="9xW-Vw-59l"/>
+                            <constraint firstItem="1lH-3c-P3p" firstAttribute="top" secondItem="2UC-Ho-f0D" secondAttribute="bottom" constant="8" id="6MG-gA-7ex"/>
                             <constraint firstItem="xZ6-Dg-ZkP" firstAttribute="leading" secondItem="Rp7-gi-Yk6" secondAttribute="trailing" constant="8" id="BJu-16-C9a"/>
                             <constraint firstAttribute="trailing" secondItem="xZ6-Dg-ZkP" secondAttribute="trailing" constant="20" id="ElM-C3-y5h"/>
+                            <constraint firstItem="2UC-Ho-f0D" firstAttribute="top" secondItem="xZ6-Dg-ZkP" secondAttribute="bottom" constant="195" id="K7f-f1-8hB"/>
                             <constraint firstItem="xZ6-Dg-ZkP" firstAttribute="top" secondItem="V3b-Jy-ZxN" secondAttribute="bottom" constant="8" id="RLy-N7-5hu"/>
                             <constraint firstAttribute="trailing" secondItem="V3b-Jy-ZxN" secondAttribute="trailing" constant="20" id="Y7E-3H-WZC"/>
                             <constraint firstItem="Rp7-gi-Yk6" firstAttribute="top" secondItem="puO-Fr-xrN" secondAttribute="bottom" constant="8" id="aTd-c1-KU1"/>
                             <constraint firstItem="1lH-3c-P3p" firstAttribute="centerX" secondItem="QWi-D3-ekf" secondAttribute="centerX" id="dzB-Ck-Rpp"/>
+                            <constraint firstItem="2UC-Ho-f0D" firstAttribute="centerX" secondItem="QWi-D3-ekf" secondAttribute="centerX" id="kqG-bh-hLq"/>
                             <constraint firstItem="V3b-Jy-ZxN" firstAttribute="top" secondItem="puO-Fr-xrN" secondAttribute="bottom" constant="8" id="nbM-3S-A0w"/>
                             <constraint firstItem="Rp7-gi-Yk6" firstAttribute="leading" secondItem="QWi-D3-ekf" secondAttribute="leading" constant="20" id="yEU-CM-SVE"/>
                             <constraint firstItem="V3b-Jy-ZxN" firstAttribute="leading" secondItem="Rp7-gi-Yk6" secondAttribute="trailing" constant="8" id="z1e-b7-aBS"/>

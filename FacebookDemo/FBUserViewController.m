@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *fbAboutLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *fbAvatarImgView;
 
+- (IBAction)shareBtnTapped:(id)sender;
+
 - (IBAction)logoutBtnTapped:(id)sender;
 @end
 
@@ -58,6 +60,20 @@
 }
 */
 #pragma mark - IBAction on view
+- (IBAction)shareBtnTapped:(id)sender {
+    [FacebookService shareImage:[UIImage imageNamed:@"apple-logo.png"] withText:@"Sample text" handler:^(BOOL result, NSError *error) {
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Success" message:@"The message has been shared successfully" preferredStyle:UIAlertControllerStyleAlert];
+        [controller addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        
+        
+        [self presentViewController:controller animated:YES completion:^{
+            
+        }];
+    }];
+}
+
 - (IBAction)logoutBtnTapped:(id)sender {
     [FacebookService logoutFromFacebook];
     [self.navigationController popToRootViewControllerAnimated:YES];
