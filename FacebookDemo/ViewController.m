@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "FacebookService.h"
 
 @interface ViewController ()
+- (IBAction)facebookLoginBtnTapped:(id)sender;
 
 @end
 
@@ -24,4 +26,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBAction on view
+
+- (IBAction)facebookLoginBtnTapped:(id)sender {
+    [FacebookService loginWithWritePermissions:@[@"publish_actions"]
+                           fromViewController:self
+                                      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                          if (result) {
+                                              [self performSegueWithIdentifier:@"goToUserView" sender:self];
+                                          } else {
+                                              NSLog(@"Error: %@", error.localizedDescription);
+                                          }
+    }];
+}
 @end
